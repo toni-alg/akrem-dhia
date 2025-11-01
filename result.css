@@ -1,0 +1,62 @@
+.result-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: right;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 30px;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+#skin-type {
+    color: var(--accent-color);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#problems-section {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+#problems-list li {
+    list-style: none;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px;
+}
+
+#tips-list {
+    padding-right: 20px;
+}
+
+#tips-list li {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.did-you-know {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+.result-container button {
+    display: block;
+    margin: 40px auto 0;
+}

@@ -1,0 +1,132 @@
+body {
+    background-color: var(--primary-color);
+}
+
+.quiz-container {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: var(--background-color);
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    text-align: center;
+    overflow: hidden;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: var(--accent-color);
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 30px;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 700;
+    align-self: flex-start;
+}
+
+.question-slide {
+    display: none;
+    animation: slideIn 0.5s forwards;
+}
+
+.question-slide.active {
+    display: block;
+}
+
+.question-slide.exit {
+    animation: slideOut 0.5s forwards;
+}
+
+.question-title {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--secondary-color);
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.answer {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 2px solid #eee;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+    text-align: right;
+    color: var(--secondary-color);
+}
+
+.answer:hover {
+    transform: scale(1.03);
+    border-color: var(--accent-color);
+}
+
+.answer.selected {
+    background-color: var(--primary-color);
+    border-color: var(--accent-color);
+}
+
+.answer input {
+    display: none;
+}
+
+.checkbox-answers .answer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.checkbox-answers input[type="checkbox"] {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    accent-color: var(--accent-color);
+}
+
+#submit-btn {
+    margin-top: 20px;
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}

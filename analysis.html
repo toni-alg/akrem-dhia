@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحليل المكونات - بيوتي لايف</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="analysis.css">
+</head>
+<body>
+    <div class="analysis-container">
+        <a href="index.html" class="back-link">→ الرجوع للرئيسية</a>
+        <h1>تحليل المكونات</h1>
+        
+        <div class="input-section">
+            <label for="product-name">اسم المنتج</label>
+            <input type="text" id="product-name" placeholder="مثال: كريم مرطب للوجه">
+            
+            <label for="ingredients-list">قائمة المكونات</label>
+            <textarea id="ingredients-list" rows="5" placeholder="ادخلي المكونات مفصولة بفواصل أو أسطر جديدة
+مثال: Aloe Vera, Coconut Oil, Vitamin C"></textarea>
+            
+            <p class="tip">💡 نصيحة: يمكنك نسخ قائمة المكونات من عبوة المنتج أو من موقع الشركة المصنعة مباشرةً</p>
+            
+            <button id="analyze-btn" class="cta-button">تحليل المكونات</button>
+        </div>
+
+        <div id="results-modal" class="modal-overlay hidden">
+            <div class="modal-content">
+                <button class="close-btn">&times;</button>
+                <h2>نتائج التحليل لـ <span id="result-product-name-modal"></span></h2>
+                <div id="results-list-modal"></div>
+            </div>
+        </div>
+
+        <div class="evaluation-criteria">
+            <h3>معايير التقييم:</h3>
+            <ul>
+                <li><span class="safe-dot"></span> <strong>آمن:</strong> مكون طبيعي وآمن للاستخدام.</li>
+                <li><span class="caution-dot"></span> <strong>حذر:</strong> يحتاج استخدام حذر أو قد لا يناسب الجميع.</li>
+                <li><span class="harmful-dot"></span> <strong>مضر:</strong> مادة كيميائية قد تسبب مشاكل صحية.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="analysis.js"></script>
+</body>
+</html>
